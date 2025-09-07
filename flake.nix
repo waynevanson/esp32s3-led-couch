@@ -21,9 +21,20 @@
           inherit system;
           overlays = [esp-dev-rust.overlays.default];
         };
+        rust-analyzer' = pkgs.rust-analyzer.overrideAttrs {
+          version = "2025-08-25-nightly";
+          src = pkgs.fetchFromGitHub {
+            owner = "rust-lang";
+            repo = "rust-analyzer";
+            rev = "nightly";
+            hash = "sha256-fuHLsvM5z5/5ia3yL0/mr472wXnxSrtXECa+pspQchA=";
+          };
+        };
       in {
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
+            rust-analyzer'
+
             esp-idf-full
 
             # Tools required to use ESP-IDF.
@@ -55,7 +66,7 @@
           ];
           shellHook = ''
             # fixes libstdc++ issues and libgl.so issues
-            export LD_LIBRARY_PATH=${pkgs.lib.makeLibraryPath [pkgs.libxml2 pkgs.zlib pkgs.stdenv.cc.cc.lib]}
+            # export LD_LIBRARY_PATH=${pkgs.lib.makeLibraryPath [pkgs.libxml2 pkgs.zlib pkgs.stdenv.cc.cc.lib]}
             export ESP_IDF_VERSION=v5.3
             export LIBCLANG_PATH=${pkgs.llvm-xtensa-lib}/lib
             export RUSTFLAGS="--cfg espidf_time64"

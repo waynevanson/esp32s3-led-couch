@@ -1,3 +1,6 @@
+#![feature(custom_test_frameworks)]
+#![test_runner(test_runner)]
+#![reexport_test_harness_main = "test_main"]
 #![no_std]
 #![no_main]
 #![deny(
@@ -41,3 +44,5 @@ fn main() -> ! {
 
     // for inspiration have a look at the examples at https://github.com/esp-rs/esp-hal/tree/esp-hal-v1.0.0-rc.0/examples/src/bin
 }
+
+pub fn test_runner(_test: &[&i32]) {}
