@@ -6,11 +6,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1757244488,
-        "narHash": "sha256-X4ZbdYz0sPnwCwcay5ad8YmKTevl0vx3PZ7xv6wuFb8=",
+        "lastModified": 1757248324,
+        "narHash": "sha256-YozAiIbSA5Vz+fwSAiTC5JesVmrWMx9/gtcX6Nj+kys=",
         "owner": "waynevanson",
         "repo": "nixpkgs-esp-dev-rust",
-        "rev": "1480790f2291d7e0ae298652ce0494e55ec28af3",
+        "rev": "66e908a8c766aaf0d107dd8147386dcad633f8dd",
         "type": "github"
       },
       "original": {
@@ -57,11 +57,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1753749649,
-        "narHash": "sha256-+jkEZxs7bfOKfBIk430K+tK9IvXlwzqQQnppC2ZKFj4=",
+        "lastModified": 1757020766,
+        "narHash": "sha256-PLoSjHRa2bUbi1x9HoXgTx2AiuzNXs54c8omhadyvp0=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "1f08a4df998e21f4e8be8fb6fbf61d11a1a5076a",
+        "rev": "fe83bbdde2ccdc2cb9573aa846abe8363f79a97a",
         "type": "github"
       },
       "original": {
